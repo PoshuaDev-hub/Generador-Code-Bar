@@ -1,12 +1,9 @@
 import { useState } from 'react';
 
 export const useBarcode = () => {
-  const [value, setValue] = useState('PROYECTO-PoshuaDev');
+  // Ponemos un texto de ejemplo para que la tarjeta no nazca vacía
+  const [value, setValue] = useState('ESCRIBE-AQUI');
   const [lineColor, setLineColor] = useState('#000000');
 
-  const handleValueChange = (newValue) => {
-    setValue(newValue);
-  };
-
-  return { value, setValue: handleValueChange, lineColor, setLineColor };
+  return { value, setValue, lineColor, setLineColor };
 };

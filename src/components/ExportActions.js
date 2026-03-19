@@ -17,7 +17,7 @@ const ExportActions = ({ value }) => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 20, 20);
       const link = document.createElement("a");
-      link.download = `barcode-${value}.png`;
+      link.download = `BarCode-${value}.png`;
       link.href = canvas.toDataURL();
       link.click();
     };
@@ -27,10 +27,10 @@ const ExportActions = ({ value }) => {
   return (
     <button 
       onClick={downloadPNG}
-      className="mt-4 flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 text-orange-600 rounded-full text-[10px] font-bold uppercase tracking-tighter transition-all"
+      className="flex items-center gap-2 px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white/60 hover:text-white rounded-full text-[10px] font-medium uppercase tracking-widest transition-all"
     >
-      <Download size={12} />
-      Guardar PNG
+      <Download size={12} className="text-[#ff6b00]" />
+      Descargar PNG
     </button>
   );
 };

@@ -8,8 +8,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Fondo degradado oscuro profesional */
-  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  /* Fondo negro puro para eliminar el ruido visual */
+  background-color: #050505; 
   overflow: hidden;
 }
 
@@ -19,15 +19,20 @@ body {
   padding: 2.5rem;
   width: 95%;
   max-width: 400px;
-  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.15); /* Tu toque rojo */
+  /* El aura roja ahora destacará mucho más */
+  box-shadow: 0 0 80px rgba(255, 0, 0, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.03);
+  /* Aseguramos que nada se mueva */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }
 
 .barcode-box {
   background: white;
   border-radius: 1.5rem;
   width: 100%;
-  height: 180px; /* ALTURA FIJA PARA QUE NO SE MUEVA */
+  height: 180px; /* Altura fija para estabilidad total */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,8 +41,14 @@ body {
   overflow: hidden;
 }
 
-/* Forzamos al SVG a ser estático y contenido */
-.barcode-container svg {
-  max-width: 100% !important;
-  height: auto !important;
+.barcode-box {
+  background: white;
+  border-radius: 1.5rem;
+  width: 100%;
+  min-height: 160px; /* Altura mínima en lugar de fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
 }

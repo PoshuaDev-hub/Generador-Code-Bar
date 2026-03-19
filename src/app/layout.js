@@ -4,16 +4,15 @@ import "../styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Modern Barcode Gen | Joshua Chiguay",
-  description: "Generador de códigos de barras profesional y minimalista",
+  title: "Generador Bar ",
+  description: "Minimalist Barcode Generator",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} antialiased`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
