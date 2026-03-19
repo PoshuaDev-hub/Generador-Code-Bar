@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Fondo degradado oscuro profesional */
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  overflow: hidden;
+}
+
+.main-card {
+  background: #0a0a0a;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+  width: 95%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.15); /* Tu toque rojo */
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.barcode-box {
+  background: white;
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 180px; /* ALTURA FIJA PARA QUE NO SE MUEVA */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* Forzamos al SVG a ser estático y contenido */
+.barcode-container svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
