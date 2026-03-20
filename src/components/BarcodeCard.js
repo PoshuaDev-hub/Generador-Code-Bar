@@ -11,15 +11,14 @@ const BarcodeCard = () => {
         Generador <span className="font-bold text-[#ff6b00]">Bar</span>
       </h1>
       
-      <input 
+        <input 
         type="text"
-        // Si el valor es el de ejemplo, lo limpiamos al hacer click para facilidad del usuario
         onFocus={(e) => { if(value === 'ESCRIBE-AQUI') setValue('') }}
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-center outline-none focus:ring-1 focus:ring-[#ff6b00] transition-all text-sm"
+        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-center outline-none focus:ring-1 focus:ring-[#ff6b00] transition-all text-base"
         placeholder="Escribe aquí..."
-      />
+        />
 
       <button className="w-full bg-[#ff6b00] hover:bg-[#ff8533] text-white font-bold py-4 rounded-2xl transition-all active:scale-95 shadow-lg shadow-orange-900/40 uppercase tracking-widest text-xs">
         Generar
